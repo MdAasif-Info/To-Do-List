@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h1>To-Do List</h1>
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Add a new task..." required />
+            <button type="submit" id="add-btn" title="Add Task">&#43;</button>
+        </form>
+        <div class="todo-progress">
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+            <div class="progress-label" id="progress-label">0% Completed</div>
+        </div>
+        <div class="todo-filters">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="active">Active</button>
+            <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        <div class="todo-actions">
+            <button type="button" id="mark-all-complete" title="Mark all as complete">Mark All Complete</button>
+            <button type="button" id="delete-completed" title="Delete all completed tasks">Delete Completed</button>
+            <button type="button" id="clear-list" title="Clear all tasks">Clear List</button>
+        </div>
+        <ul id="todo-list"></ul>
+        <div id="todo-summary" class="todo-summary">
+            <span>Total: <span id="total-count">0</span></span>
+            <span>Completed: <span id="completed-count">0</span></span>
+            <span>Remaining: <span id="remaining-count">0</span></span>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
